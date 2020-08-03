@@ -1,0 +1,37 @@
+GET http://localhost:3000
+
+###
+
+GET http://localhost:3000/products
+
+###
+
+POST http://localhost:3000/products/add
+Content-Type: application/json
+
+{
+    "name": "Apple",
+    "price": 2,
+    "quantity": 10,
+    "id": 0
+}
+
+###
+
+POST http://localhost:3000/products/delete
+Content-Type: application/json
+
+{
+    "query": { "id": 0 },
+    "multiple": true
+}
+
+###
+
+POST http://localhost:3000/products/update
+Content-Type: application/json
+
+{
+    "query": {"id": 0},
+    "data": { "name": "Banana", "price": 10, "quantity": 5, "id": 0}
+}

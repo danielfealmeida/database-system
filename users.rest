@@ -1,0 +1,35 @@
+GET http://localhost:3000
+
+###
+
+GET http://localhost:3000/users
+
+###
+
+POST http://localhost:3000/users/add
+Content-Type: application/json
+
+{
+    "name": "Dan",
+    "id": 0
+}
+
+###
+
+POST http://localhost:3000/users/delete
+Content-Type: application/json
+
+{
+    "query": { "id": 0 },
+    "multiple": true
+}
+
+###
+
+POST http://localhost:3000/users/update
+Content-Type: application/json
+
+{
+    "query": {"id": 0},
+    "data": { "name": "John", "id": 0 }
+}
